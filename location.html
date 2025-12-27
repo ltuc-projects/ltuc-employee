@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Services | LTUC Employee</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+                LTUC Employee
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Directory</a></li>
+                <li><a href="location.html" class="active">Location Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="page-intro">
+            <h1>Location Services</h1>
+            <p>Securely detect your network and geographic information for administrative verification.</p>
+        </div>
+
+        <main style="display: block;">
+            <div class="card location-card">
+                <h2>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    Detection Panel
+                </h2>
+
+                <div class="location-data">
+                    <div class="data-item">
+                        <div class="data-label">Public IP Address</div>
+                        <div id="ip-display" class="data-value">Detecting...</div>
+                    </div>
+
+                    <div class="data-item">
+                        <div class="data-label">GPS Latitude</div>
+                        <div id="lat-display" class="data-value">--</div>
+                    </div>
+
+                    <div class="data-item">
+                        <div class="data-label">GPS Longitude</div>
+                        <div id="lng-display" class="data-value">--</div>
+                    </div>
+                </div>
+
+                <div class="form-actions" style="justify-content: center;">
+                    <button id="detect-btn" class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                        Refresh Detection
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>LTUC Employee</h3>
+                <p>A secure and efficient system for managing academic and administrative staff records.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Employee Directory</a></li>
+                    <li><a href="location.html">Location Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 LTUC Employee Information System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast hidden"></div>
+    <script src="location.js"></script>
+</body>
+
+</html>
